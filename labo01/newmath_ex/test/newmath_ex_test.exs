@@ -4,7 +4,7 @@ defmodule NewmathExTest do
 
   describe "div/1" do
     test "ok" do
-      assert NewmathEx.div(4, 2) == {:ok, 2}
+      assert NewmathEx.div(4, 2) == {:ok, 2.0}
     end
 
     test "by zero" do
