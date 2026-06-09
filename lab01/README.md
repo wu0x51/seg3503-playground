@@ -40,17 +40,16 @@ Pour exécuter les tests.
 
 ### Java
 
-![](/images/java-version.png)
+![](/images/lab01/java-version.png)
 
-![](/images/java-run.png)
+![](/images/lab01/java-run.png)
 
-![](/images/java-test.png)
+![](/images/lab01/java-test.png)
 
 ### Elixir
 
-![](/images/elixir-version.png)
+![](/images/lab01/elixir-version.png)
 
-![](/images/elixir-run.png)
+![](/images/lab01/elixir-run.png)
 
-![](/images/elixir-test.png)
-
+![](/images/lab01/elixir-test.png)
