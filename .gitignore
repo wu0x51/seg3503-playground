@@ -1,0 +1,11 @@
+# logs
+*.log
+
+# editor/IDE files
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
