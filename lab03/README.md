@@ -36,4 +36,4 @@ Avant
 
 Après
 
-![](/images/lab03/date-cover-after.png)
+![](/images/lab03/date-coverage-after.png)
