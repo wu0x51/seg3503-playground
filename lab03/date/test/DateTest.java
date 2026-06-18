@@ -155,4 +155,25 @@ class DateTest {
       assertFalse(d.equals("not a date"));
   }
 
+  @Test
+  void equals_sameDates01() {
+      Date d1 = new Date(2022, 2, 10);
+      Date d2 = new Date(2022, 2, 9);
+      assertFalse(d1.equals(d2));
+  }
+
+  @Test
+  void equals_sameDates02() {
+      Date d1 = new Date(2022, 2, 10);
+      Date d2 = new Date(2022, 1, 10);
+      assertFalse(d1.equals(d2));
+  }
+
+  @Test
+  void equals_sameDates03() {
+      Date d1 = new Date(2022, 2, 10);
+      Date d2 = new Date(2021, 2, 10);
+      assertFalse(d1.equals(d2));
+  }
+
 }
