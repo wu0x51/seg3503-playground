@@ -43,6 +43,7 @@ public class DateNextDateOkTest
     params.add(new Integer[] { 3456, 12, 31, 3457, 1, 1 });
     params.add(new Integer[] { 2000, 2, 28, 2000, 2, 29 });
     params.add(new Integer[] { 1900, 2, 28, 1900, 3, 1 });
+    params.add(new Integer[] { 2000, 9, 30, 2000, 10, 1 });
     return params;
   }
 
