@@ -38,6 +38,7 @@ public class DateExceptionTest {
         params.add(new Integer[] { 1975, 6, -50, 0, 0, 0 });
         params.add(new Integer[] { 2026, 1, 32, 0, 0, 0 });
         params.add(new Integer[] { 2026, 4, 31, 0, 0, 0 });
+        params.add(new Integer[] { 2024, 2, 30, 0, 0, 0 });
         return params;
     }
 
