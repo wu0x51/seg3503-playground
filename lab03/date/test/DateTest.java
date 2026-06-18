@@ -149,4 +149,10 @@ class DateTest {
     );
   }
 
+  @Test
+  void equals_notADate() {
+      Date d = new Date(2026, 06, 17);
+      assertFalse(d.equals("not a date"));
+  }
+
 }
