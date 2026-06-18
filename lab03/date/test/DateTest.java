@@ -176,4 +176,10 @@ class DateTest {
       assertFalse(d1.equals(d2));
   }
 
+  @Test
+  void toString_returnsCorrectFormat() {
+      Date d = new Date(2022, 2, 10);
+      assertEquals("2022/February/10", d.toString());
+  }
+
 }
