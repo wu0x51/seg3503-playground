@@ -11,4 +11,10 @@ class TicTest {
         assertEquals(board, board2);
     }
 
+    @Test
+    void testIfEmpty() {
+        Tic tic = new Tic(0, 0);
+        assertEquals(true, tic.isEmpty());
+    }
+
 }
