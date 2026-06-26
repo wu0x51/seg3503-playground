@@ -15,4 +15,18 @@ public class Tic {
             }
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        // Standard checks
+        if (this == o)
+            return true;
+        if (!(o instanceof Tic other))
+            return false;
+
+        if (!(rows == other.rows && cols == other.cols))
+            return false;
+
+        return true;
+    }
 }
