@@ -25,8 +25,21 @@ public class Tic {
         if (!(o instanceof Tic other))
             return false;
 
+        // Size
         if (!(rows == other.rows && cols == other.cols))
             return false;
+
+        // Turn
+        if (!(turn.equals(other.turn)))
+            return false;
+
+        // Contents
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (!(board[i][j].equals(other.board[i][j])))
+                    return false;
+            }
+        }
 
         return true;
     }
