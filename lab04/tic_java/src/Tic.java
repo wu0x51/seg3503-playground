@@ -44,7 +44,18 @@ public class Tic {
         return true;
     }
 
+    public void place(int row, int col, char player) {
+        board[row][col] = String.valueOf(player);
+    }
+
     public boolean isEmpty() {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (!(board[i][j].equals("_")))
+                    return false;
+            }
+        }
+
         return true;
     }
 }
