@@ -20,7 +20,7 @@ class TicTest {
     @Test
     void testIfNotEmpty() {
         Tic tic = new Tic(3, 3);
-        tic.place(0, 0, 'X');
+        tic.place(0, 0);
         assertEquals(false, tic.isEmpty());
     }
 

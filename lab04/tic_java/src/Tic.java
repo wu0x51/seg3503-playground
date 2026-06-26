@@ -44,8 +44,8 @@ public class Tic {
         return true;
     }
 
-    public void place(int row, int col, char player) {
-        board[row][col] = String.valueOf(player);
+    public void place(int row, int col) {
+        board[row][col] = turn;
     }
 
     public boolean isEmpty() {
