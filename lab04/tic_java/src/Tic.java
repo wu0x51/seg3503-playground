@@ -43,4 +43,8 @@ public class Tic {
 
         return true;
     }
+
+    public boolean isEmpty() {
+        return true;
+    }
 }
