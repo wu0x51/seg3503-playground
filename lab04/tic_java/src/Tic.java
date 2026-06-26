@@ -46,6 +46,11 @@ public class Tic {
 
     public void place(int row, int col) {
         board[row][col] = turn;
+        if (turn.equals("X")) {
+            turn = "O";
+        } else {
+            turn = "X";
+        }
     }
 
     public boolean isEmpty() {
