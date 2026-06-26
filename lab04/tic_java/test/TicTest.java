@@ -17,4 +17,11 @@ class TicTest {
         assertEquals(true, tic.isEmpty());
     }
 
+    @Test
+    void testIfNotEmpty() {
+        Tic tic = new Tic(3, 3);
+        tic.place(0, 0, 'X');
+        assertEquals(false, tic.isEmpty());
+    }
+
 }
