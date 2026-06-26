@@ -44,13 +44,17 @@ public class Tic {
         return true;
     }
 
-    public void place(int row, int col) {
+    public boolean place(int row, int col) {
+        if (!(board[row][col].equals("_")))
+            return false;
+
         board[row][col] = turn;
         if (turn.equals("X")) {
             turn = "O";
         } else {
             turn = "X";
         }
+        return true;
     }
 
     public boolean isEmpty() {
