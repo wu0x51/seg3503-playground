@@ -4,13 +4,14 @@ public class Tic {
     int cols;
     String turn;
 
-    public Tic(int row, int col) {
-        board = new String[row][col];
-        rows = row;
-        cols = col;
+    public Tic(int rows, int cols) {
+        board = new String[rows][cols];
+        this.rows = rows;
+        this.cols = cols;
         turn = "X";
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 board[i][j] = "_";
             }
         }
