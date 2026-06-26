@@ -33,4 +33,11 @@ class TicTest {
         assertEquals("O", tic.board[0][1]);
     }
 
+    @Test
+    void testPreventPlaceOnFilled() {
+        Tic tic = new Tic(3, 3);
+        assertEquals(true, tic.place(0, 0));
+        assertEquals(false, tic.place(0, 0));
+    }
+
 }
