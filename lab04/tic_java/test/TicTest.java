@@ -24,4 +24,13 @@ class TicTest {
         assertEquals(false, tic.isEmpty());
     }
 
+    @Test
+    void testCorrectTurn() {
+        Tic tic = new Tic(3, 3);
+        tic.place(0, 0);
+        tic.place(0, 1);
+        assertEquals("X", tic.board[0][0]);
+        assertEquals("O", tic.board[0][1]);
+    }
+
 }
