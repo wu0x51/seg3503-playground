@@ -15,6 +15,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.Architecture;
 
 class ExampleSeleniumTest {
 
@@ -25,15 +26,18 @@ class ExampleSeleniumTest {
   public static void setUpBeforeClass() throws Exception {
     ProcessBuilder pb = new ProcessBuilder("java", "-jar", "bookstore5.jar");
     server = pb.start();
+    // Wait for server to start
+    // (without this, server does not bind with port 8080 in time for test1)
+    Thread.sleep(10000);
   }
 
   @BeforeEach
   void setUp() {
     // Pick your browser
-    // driver = new FirefoxDriver();
-    // driver = new SafariDriver();
-    WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
+    driver = new FirefoxDriver();
+    // WebDriverManager installs/detects incorrect architecture
+    // Use self-installed GeckoDriver instead
+    // WebDriverManager.chromedriver().setup();
 
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.get("http://localhost:8080/");
