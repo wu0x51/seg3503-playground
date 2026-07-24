@@ -82,4 +82,25 @@ class ExampleSeleniumTest {
     private String[] getWords(String s) {
         return s.split("\\s+");
     }
+
+    @Test
+    public void administratorSignIn() {
+        driver.navigate().to("http://localhost:8080/admin");
+        assertEquals("http://localhost:8080/login", driver.getCurrentUrl());
+
+        WebElement loginBtn = driver.findElement(By.id("loginBtn"));
+        assertEquals("Sign in", loginBtn.getAttribute("value"));
+
+        WebElement loginField = driver.findElement(By.id("loginId"));
+        loginField.sendKeys("admin");
+
+        WebElement passwdField = driver.findElement(By.id("loginPasswd"));
+        passwdField.sendKeys("password");
+
+        loginBtn.click();
+
+        assertEquals("http://localhost:8080/admin", driver.getCurrentUrl());
+        WebElement form = driver.findElement(By.tagName("form"));
+        assertEquals("search-category-admin-form", form.getAttribute("id"));
+    }
 }
